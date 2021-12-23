@@ -1,0 +1,51 @@
+.popup {
+    .popup_button {
+        position: absolute;
+        bottom: 54px;
+        left: 32px;
+        margin: 0;
+        cursor: pointer;
+
+        @media screen and (min-width: $break-mobile) {
+            left: 44px;
+        }
+
+        @media screen and (min-width: $break-tablet) {
+            left: 64px;
+        }
+
+        img {
+            height: auto;
+            width: 160px !important;
+        }
+    }
+
+    .popup_panel {
+        cursor: pointer;
+        position: fixed;
+        display: none;
+        background-color: rgba(0, 0,0, 0.8);
+        place-items: center;
+        z-index: 99;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+
+        & > * {
+            max-width: 1200px;
+            margin: 20px;
+        }
+    }
+}
+
+.block-editor {
+
+    .popup {
+        background-color: rgba(0, 0,0, 0.8);
+    }
+    .popup_button, .popup_panel {
+        position: unset;
+        display: block;
+    }
+}

@@ -1,0 +1,114 @@
+.slider {
+    padding: 32px 0;
+    @media screen and (min-width: $break-tablet) {
+        padding: 64px 0;
+    }
+
+    .slider_container {
+        padding: 0;
+        
+    }
+
+    .slider_header {
+        display: grid;
+        grid-auto-flow: column;
+        place-items: center;
+        padding-bottom: 24px;
+
+        h2 {
+            margin: 0;
+        }
+    }
+    .slide {
+        text-align: center;
+
+        blockquote {
+            margin: 0;
+            p {
+                font-size: 16px;     
+                font-style: normal;       
+            }
+
+            cite {
+                color: $primary-dark-200;
+                font-size: 16px;
+                font-weight: 600;
+                font-style: normal;
+            }
+        }
+    }
+
+    .slick-dots {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 10px;
+        gap: 10px;
+        margin-top: 1em;
+        li::marker {
+            color: transparent !important;
+        }
+
+        li {
+            margin: 0;
+        }
+
+        button {
+            font-size: 0;
+            background-color: $primary-dark-200;
+            padding: 8px;
+            border-radius: 50px;
+            border: 0;
+        }
+
+        li.slick-active {
+            button {
+                background-color: $primary-color-500;
+            }
+        }
+    }
+
+    // .slider_wrapper {
+    //     display: flex;
+    //     flex-wrap: wrap;
+    // }
+}
+
+.is-style-slider {
+    .blocks-gallery-grid {
+        max-width: 100%;
+
+        .slick-track {
+            display: flex;
+        }
+
+        .slick-dots {
+            margin: 0 auto;
+            display: inline-grid;
+            grid-auto-flow: column;
+            grid-gap: 10px;
+            position: absolute;
+            margin-top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            li::marker {
+                color: transparent !important;
+            }
+    
+            button {
+                font-size: 0;
+                background-color: $primary-dark-200;
+                padding: 8px;
+                border-radius: 50px;
+                border: 0;
+            }
+    
+            li.slick-active {
+                button {
+                    background-color: $primary-color-500;
+                }
+            }
+        }
+    }
+}
